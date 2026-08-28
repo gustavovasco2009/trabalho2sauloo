@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b16;
+    color: white;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* =========================
+   TÍTULO
+   ========================= */
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 35px;
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+
+body > h2,
+body > label,
+body > input,
+body > button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label {
+    display: block;
+    width: 500px;
+    max-width: 90%;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    color: #bdbdf5;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 500px;
+    max-width: 90%;
+    padding: 13px 15px;
+    border: 2px solid #29294a;
+    border-radius: 8px;
+    background: #15152a;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #00f7ff;
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.4);
+}
+
+/* =========================
+   BOTÕES
+   ========================= */
+
+button {
+    padding: 13px 20px;
+    margin-top: 20px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #00f7ff;
+    color: #05050c;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.7);
+}
+
+button:last-of-type {
+    background: #ff3864;
+    color: white;
+}
+
+button:last-of-type:hover {
+    box-shadow: 0 0 15px rgba(255, 56, 100, 0.7);
+}
+
+/* =========================
+   LISTA DE JOGOS
+   ========================= */
+
+body > h2:last-of-type {
+    width: 1050px;
+    max-width: 90%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid #29294a;
+    padding-bottom: 10px;
+}
+
+#listaJogos {
+    width: 1050px;
+    max-width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* =========================
+   CARD DO JOGO
+   ========================= */
+
+.jogo {
+    background: #15152a;
+    border: 1px solid #29294a;
+    border-radius: 12px;
+    padding: 22px;
+    transition: 0.25s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.jogo:hover {
+    transform: translateY(-5px);
+    border-color: #00f7ff;
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.25);
+}
+
+.jogo h3 {
+    color: #00f7ff;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.jogo p {
+    color: #cfcfe8;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.jogo p:last-child {
+    color: #ffd43b;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    button {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    #listaJogos {
+        grid-template-columns: 1fr;
+    }
+}
